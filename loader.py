@@ -95,3 +95,4 @@ def get_guess():
 	already_guessed.append(guess)
 	return guess
 
+get_guess():
