@@ -92,6 +92,7 @@ def get_guess():
 			exit()
 		if len(guess) == 1 and guess in string.ascii_lowercase and guess not in already_guessed:
 			break
+	already_guessed = []
 	already_guessed.append(guess)
 	return guess
 
