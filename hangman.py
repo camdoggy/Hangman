@@ -1,48 +1,48 @@
 import random
 HANGMANPICS = ['''
-  +---+
+  _____
   |   |
       |
       |
       |
       |
 =========''', '''
-  +---+
+  _____
   |   |
   O   |
       |
       |
       |
 =========''', '''
-  +---+
+  _____
   |   |
   O   |
   |   |
       |
       |
 =========''', '''
-  +---+
+  _____
   |   |
   O   |
  /|   |
       |
       |
 =========''', '''
-  +---+
+  _____
   |   |
   O   |
  /|\  |
       |
       |
 =========''', '''
-  +---+
+  _____
   |   |
   O   |
  /|\  |
  /    |
       |
 =========''', '''
-  +---+
+  _____
   |   |
   O   |
  /|\  |
@@ -57,7 +57,7 @@ def getRandomWord(wordList):
 def displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord):
     print(HANGMANPICS[len(missedLetters)])
     print()
-    print('Missed letters:',
+    print('Missed letters:')
     for letter in missedLetters:
         print(letter,
     print()
