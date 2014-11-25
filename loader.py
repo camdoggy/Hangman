@@ -69,7 +69,10 @@ hangmanImages = ['''
 ]
 
 def getRandomWord():
-	words = ["charmander", "pikachu", "blastoise", "squirtle", "combusken", "raichu"]
+	text_file = open("dictionary.txt", "r")
+	word = text_file.readlines()
+	return random.choice(word).strip()
+
 	return random.choice(words)
 
 word = getRandomWord()
