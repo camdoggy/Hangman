@@ -1,4 +1,5 @@
 import random
+import string
 HANGMANPICS = ['''
   _____
   |   |
@@ -57,18 +58,15 @@ def getRandomWord():
 
 def displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord):
     print(HANGMANPICS[len(missedLetters)])
-    print()
-    print('Missed letters:')
+    print 'Missed letters:',
     for letter in missedLetters:
-        print(letter,
-    print()
+        print letter,
     blanks = '_' * len(secretWord)
     for i in range(len(secretWord)): # replace blanks with correctly guessed letters
         if secretWord[i] in correctLetters:
             blanks = blanks[:i] + secretWord[i] + blanks[i+1:]
     for letter in blanks: # show the secret word with spaces in between each letter
-        print(letter,
-    print()
+        print letter,
 def getGuess(alreadyGuessed):
     # Returns the letter the player entered. This function makes sure the player entered a single letter, and not something else.
     while True:
