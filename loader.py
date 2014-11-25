@@ -79,7 +79,7 @@ def draw(misses):
 
 total_misses = len(hangmanImages) - 1
 
-#for i in range(len(hangmanImages)):
+for i in range(len(hangmanImages)):
 	print(word)
  	draw(i)
 	time.sleep(1)
@@ -88,7 +88,10 @@ total_misses = len(hangmanImages) - 1
 def get_guess():
 	while True:
 		guess = raw_input("Pick a letter: ").lower()
+		if guess == "quit":
+			exit()
 		if len(guess) == 1 and guess in string.ascii_lowercase and guess not in already_guessed:
 			break
 	already_guessed.append(guess)
 	return guess
+
